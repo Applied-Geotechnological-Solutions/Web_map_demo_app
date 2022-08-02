@@ -1,8 +1,29 @@
 <template>
 
 
+<div style="display: flex; justify-content: center; align-items: flex-end;">
 
- <div class="home-header" style="margin-left: 75vh; margin-top:1vh; margin-bottom:2vh;"> Web Map Demo </div>
+<a href="https://agtsolutions.org/">
+<img src="https://github.com/Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/AGT_logo1_2.png?raw=true%22" style="height:120px; object-fit: contain; order: 1;">
+</a>
+ <div class="home-header" style=" order: 2; margin-left:26%; margin-top:1vh; margin-bottom:2vh; min-width:23%"> Web Map Demo </div> 
+
+
+  
+
+ 
+
+<button style=" order: 3; background-color: rgb(23, 9, 46); border-radius: 1.5vh; margin-top:1vh; margin-bottom:2vh; margin-left:15%; min-width:19% max-width:19%;">
+  <a class="button" href="mailto: syver.petersen@agtsolutions.org?subject=Questions about AGT web map"> 
+    Questions about our web map product?
+  </a>
+</button>
+
+    
+</div>
+    
+  
+ 
 
 
 
@@ -1467,7 +1488,6 @@ function initMap() {
 
  const Water_T_line_cords = [ [ -1827666.645244958112016, 1420361.235884354682639 ], [ -1827544.7718971518334, 1420433.100744455587119 ], [ -1827437.924030581954867, 1420561.431293039349839 ], [ -1827148.266142303589731, 1420409.145771378651261 ], [ -1826927.892417503753677, 1420341.558632168220356 ], [ -1826538.064654315588996, 1420330.436712903203443 ], [ -1826101.490949503844604, 1420246.594689023448154 ], [ -1825926.193668412743136, 1420192.696372592821717 ], [ -1825646.55276762531139, 1419977.959626286290586 ], [ -1825506.314942752476782, 1419911.22900770814158 ], [ -1825410.318812631303445, 1419893.263098063878715 ], [ -1824698.277951819356531, 1420007.047379672992975 ], [ -1824270.886485541705042, 1420164.891724557615817 ], [ -1823661.519746511708945, 1420170.024888351326808 ], [ -1823498.743699784157798, 1420158.047507575014606 ], [ -1823008.746061687357724, 1420062.228638738160953 ], [ -1822885.620590445119888, 1420006.191857100231573 ], [ -1822697.8020749904681, 1419972.826496350811794 ], [ -1822627.265788074815646, 1419968.976649494376034 ], [ -1822520.835295984055847, 1420001.058722191024572 ], [ -1822439.447272620629519, 1420030.146498650778085 ], [ -1822344.285891456995159, 1420036.56292384210974 ], [ -1822232.012156662996858, 1420054.956683888565749 ], [ -1822162.727993183769286, 1420069.928357621422037 ], [ -1822054.210628698579967, 1420063.511925078229979 ], [ -1821934.006778807612136, 1420052.390112021705136 ], [ -1821884.339215831831098, 1420042.551588628208265 ], [ -1821744.936139917233959, 1420047.256968965521082 ], [ -1821632.662405123701319, 1420045.545921483077109 ], [ -1821581.325344232609496, 1420016.885891072219238 ], [ -1821553.361254153773189, 1420009.827828210312873 ], [ -1821577.151599444681779, 1420059.448185199638829 ], [ -1821588.838084850693122, 1420100.299490837613121 ], [ -1821579.02978459908627, 1420115.485069325892255 ], [ -1821512.041180753614753, 1420152.058819036232308 ], [ -1821482.198905520141125, 1420151.844937324756756 ], [ -1821456.11300059617497, 1420158.475271090632305 ], [ -1821503.902378417318687, 1420247.877983486512676 ], [ -1821553.15256691374816, 1420332.575543201295659 ], [ -1821589.46414656820707, 1420388.612952998839319 ], [ -1821618.680360083002597, 1420446.361541600199416 ], [ -1821634.957964756060392, 1420522.504300192696974 ], [ -1821657.078812131891027, 1420607.202658911701292 ], [ -1821692.973017307231203, 1420703.451092978008091 ], [ -1821766.013551095500588, 1420800.127618263009936 ], [ -1821824.863352604676038, 1420885.254559059860185 ], [ -1821846.984199980041012, 1420923.326487538870424 ], [ -1821438.374585246900097, 1421006.742684723809361 ], [ -1820874.292977166594937, 1421116.253542504040524 ], [ -1820775.010023024864495, 1421272.980980299413204 ], [ -1820712.403851206647232, 1421421.848765455186367 ], [ -1820593.869499230524525, 1421621.195900695631281 ], [ -1820483.68263682955876, 1421850.489574021659791 ], [ -1820413.563724393257871, 1421978.826374250696972 ], [ -1820335.932071338407695, 1422020.749851713888347 ], [ -1820291.690376586979255, 1422024.172179072862491 ], [ -1820203.206987083656713, 1421980.537535412469879 ], [ -1820108.045605919789523, 1421943.747592610307038 ], [ -1820032.918199737556279, 1421894.124022556934506 ], [ -1819997.858743519289419, 1421830.811314729042351 ], [ -1819954.451797725865617, 1421755.520706445677206 ], [ -1819938.591567531926557, 1421712.314252206822857 ], [ -1819936.087320659542456, 1421666.113362246192992 ], [ -1819921.061839422909543, 1421609.645707508316264 ], [ -1819910.62747745309025, 1421583.550843488890678 ], [ -1819868.472655095858499, 1421541.627996207913384 ], [ -1819831.743700962048024, 1421476.177141144871712 ], [ -1819800.857989531941712, 1421412.865343030542135 ], [ -1819784.997759337536991, 1421353.403712161350995 ], [ -1819774.563397367950529, 1421331.586885268101469 ], [ -1819683.575760991778225, 1421333.511898747412488 ], [ -1819585.075383997289464, 1421318.967355612665415 ], [ -1819465.70628306386061, 1421285.600490008946508 ], [ -1819359.693165451055393, 1421253.08922187006101 ], [ -1819327.972705063410103, 1421339.500830386532471 ], [ -1819274.548771778121591, 1421517.458218854153529 ], [ -1819239.906690038740635, 1421636.810058037051931 ], [ -1819292.49587436649017, 1421460.563070024596527 ], [ -1819358.441042015096173, 1421252.661442267941311 ], [ -1819507.026356463786215, 1421296.294994047377259 ], [ -1819634.742946973303333, 1421328.806310466490686 ], [ -1819738.251817713258788, 1421330.517433390486985 ], [ -1819774.146022888598964, 1421331.372994888108224 ], [ -1819806.701232234714553, 1421233.839146015932783 ], [ -1819835.91744574951008, 1421163.683421804336831 ], [ -1819818.387717640493065, 1421085.827877097763121 ], [ -1819810.040228064870462, 1420966.05052276304923 ], [ -1819819.222466598032042, 1420879.640023260610178 ], [ -1819886.837132161715999, 1420770.985600890824571 ], [ -1819956.121295640943572, 1420690.564478628570214 ], [ -1820103.871861132560298, 1420616.987901839660481 ], [ -1820232.423200599616393, 1420548.544741564197466 ], [ -1820398.53824315732345, 1420469.83530619321391 ], [ -1820446.953682696679607, 1420459.568873791955411 ], [ -1820489.525879533262923, 1420465.557625586399809 ], [ -1820551.297302393941209, 1420418.503180387429893 ], [ -1820620.581465873401612, 1420357.760281776310876 ], [ -1820689.030880394857377, 1420309.850479315500706 ], [ -1820751.637052213540301, 1420281.404071408789605 ], [ -1820785.235697755822912, 1420271.137705455766991 ], [ -1820797.548244879813865, 1420252.102161494549364 ], [ -1820833.025075577199459, 1420270.068292542826384 ], [ -1820880.188391680829227, 1420285.0400768853724 ], [ -1820976.184521801769733, 1420334.660902890609577 ], [ -1821066.754783699288964, 1420392.409384470200166 ], [ -1821166.92465860885568, 1420453.580123228253797 ], [ -1821270.433529348112643, 1420507.478922645328566 ], [ -1821333.874450124101713, 1420528.439593813149258 ], [ -1821448.44374455162324, 1420614.635165535379201 ], [ -1821577.621145737357438, 1420670.031461745500565 ], [ -1821658.591794622130692, 1420717.941857004771009 ], [ -1821713.685225822264329, 1420735.480503558879718 ], [ -1821751.248928913613781, 1420781.252143130404875 ], [ -1821797.57749605900608, 1420851.834719070699066 ], [ -1821847.453746274113655, 1420922.845240939874202 ], [ -1822214.534600369399413, 1420846.915321863722056 ], [ -1822642.343441128497943, 1420759.649631372187287 ], [ -1822959.130670529324561, 1420697.622706527356058 ], [ -1823338.106697269948199, 1420546.619780007749796 ], [ -1823682.023267791606486, 1420402.461909634526819 ], [ -1823978.776522211264819, 1420283.542898103129119 ], [ -1824291.390006824396551, 1420157.352391873719171 ], [ -1824617.776849237270653, 1420027.312577971024439 ], [ -1824681.635144492378458, 1420007.207790155196562 ], [ -1824937.485699989832938, 1419963.576170727843419 ], [ -1825247.594937730580568, 1419912.244937449460849 ], [ -1825342.338944415561855, 1419894.279027177719399 ], [ -1825415.796852682251483, 1419890.429190704133362 ], [ -1825500.941246355185285, 1419911.389417660655454 ], [ -1825638.674824355170131, 1419970.420341999735683 ], [ -1825808.963611701270565, 1420108.58739360421896 ], [ -1825923.324218889232725, 1420189.862436093622819 ], [ -1826093.61300623556599, 1420243.33298250916414 ], [ -1826377.010277332970873, 1420304.07564237806946 ], [ -1826526.847715218085796, 1420328.458295012824237 ], [ -1826810.036299076396972, 1420337.013616568176076 ], [ -1826937.335515107261017, 1420342.78846003790386 ], [ -1827075.90384206478484, 1420372.304344551404938 ], [ -1827221.567535162670538, 1420444.169231975451112 ], [ -1827435.680642781080678, 1420558.811205345671624 ], [ -1827584.474644469562918, 1420634.526487562339753 ], [ -1827792.327134906314313, 1420749.169210651889443 ], [ -1827962.615922252414748, 1420847.556982322363183 ], [ -1828101.184249210637063, 1420921.989691450726241 ], [ -1828224.727094931993634, 1421056.311269001103938 ], [ -1828167.129416859243065, 1420933.967386565404013 ], [ -1828130.40046272543259, 1420866.379028717055917 ], [ -1828056.107805501203984, 1420695.269963702652603 ], [ -1827965.12016912503168, 1420533.572821705136448 ], [ -1827874.132532749092206, 1420341.932927598012611 ], [ -1827838.238327573053539, 1420270.923822867684066 ], [ -1827663.775795439491048, 1420362.465713054640219 ] ]
 
-
   const Boat_Clinic_route = new LineString(Boat_Clinic_line_cords)
   const Water_T_route = new LineString(Water_T_line_cords)
 
@@ -1493,6 +1513,8 @@ function initMap() {
       }),
   })
 
+  
+
 
 var Boat_Clinic_position = new Point(Boat_Clinic_route.getFirstCoordinate())
 
@@ -1504,38 +1526,28 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
 
 
   const Boat_Clinic_point_features = new Feature({
-      type: 'Mobile Boat Clinic',
+      Type: 'Mobile Boat Clinic',
       geometry: Boat_Clinic_position,
     })
-  const Boat_Clinic_style = new Style({
-      image: new Icon({
-      src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/1.boatc.png?raw=true',
-      crossOrigin: undefined,
-      scale: [icon_size.value, icon_size.value],
-            }),
-          })
+  
 
   const Water_T_point_features = new Feature({
       type: 'Emergency Water Trucking',
       geometry: Water_T_position,
     })
-  const Water_T_style = new Style({
-      image: new Icon({
-      src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/2.wtruck.png?raw=true',
-      crossOrigin: undefined,
-      scale: [icon_size.value, icon_size.value],
-            }),
-          })
+  
 
 // LAYERS Movement
 
   const Boat_Clinic_Point = new VectorLayer({
       source: new VectorSource({
-          features: [Boat_Clinic_point_features]
+          features: [Boat_Clinic_point_features],
+          crossOrigin: undefined,
       }),
-      style: Boat_Clinic_style,
+      //style: Boat_Clinic_style,
       zIndex:2,
   })
+
   const Boat_Clinic_Stops = new VectorLayer({
       source: new VectorSource({
         format: new GeoJSON(),
@@ -1544,11 +1556,26 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
       }),
   })
 
+  const Boat_Clinic_icon_point = new VectorLayer({
+      source: new VectorSource({
+        format: new GeoJSON(),
+        url: 'https://raw.githubusercontent.com/Applied-Geotechnological-Solutions/Web_map_demo_data/main/Icon_random_point.json.geojson',
+        crossOrigin: undefined,
+      }),
+      style: new Style({
+        image: new Icon({
+        src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/1.boatc.png?raw=true',
+        crossOrigin: undefined,
+        scale: [0.1, 0.1],
+            }),
+          }),
+      }) 
+
   const Water_T_Point = new VectorLayer({
       source: new VectorSource({
           features: [Water_T_point_features]
       }),
-      style: Water_T_style,
+      //style: Water_T_style,
       zIndex:2,
   })
   const Water_T_Stops = new VectorLayer({
@@ -1558,16 +1585,35 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
         crossOrigin: undefined,
       }),
   })
+
+  const Water_T_icon_point = new VectorLayer({
+      source: new VectorSource({
+        format: new GeoJSON(),
+        url: 'https://raw.githubusercontent.com/Applied-Geotechnological-Solutions/Web_map_demo_data/main/Icon_random_point.json.geojson',
+        crossOrigin: undefined,
+      }),
+      style: new Style({
+        image: new Icon({
+        src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/2.wtruck.png?raw=true',
+        crossOrigin: undefined,
+        scale: [0.1, 0.1],
+            }),
+          }),
+      })
   
 
   // ADD EXTRA LAYERS
   map.value.addLayer(Boat_Clinic_Lines);
   map.value.addLayer(Boat_Clinic_Point);
   map.value.addLayer(Boat_Clinic_Stops);
+  map.value.addLayer(Boat_Clinic_icon_point);
+  
 
   map.value.addLayer(Water_T_Lines);
   map.value.addLayer(Water_T_Point);
   map.value.addLayer(Water_T_Stops);
+  map.value.addLayer(Water_T_icon_point);
+  
   
 
     var distance = 0;
@@ -1579,7 +1625,7 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
 
       // style called again to enable scaling of icon
 
-      var Boat_Clinic_style2 = new Style({
+      var Boat_Clinic_style = new Style({
       image: new Icon({
       src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/1.boatc.png?raw=true',
       crossOrigin: undefined,
@@ -1587,7 +1633,7 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
             }),
           })
 
-      var Water_T_style2 = new Style({
+      var Water_T_style = new Style({
       image: new Icon({
       src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/2.wtruck.png?raw=true',
       crossOrigin: undefined,
@@ -1628,10 +1674,10 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
 
       var vectorContext = getVectorContext(event);
 
-      vectorContext.setStyle(Boat_Clinic_style2); //Boat_Clinic_Point.getStyle() alternative ?
+      vectorContext.setStyle(Boat_Clinic_style); //Boat_Clinic_Point.getStyle() alternative ?
       vectorContext.drawGeometry(Boat_Clinic_position);
 
-      vectorContext.setStyle(Water_T_style2);
+      vectorContext.setStyle(Water_T_style);
       vectorContext.drawGeometry(Water_T_position);
       
       
@@ -2324,11 +2370,35 @@ margin-top: 1vh;
 
 .home-header {
         color: rgb(0, 0, 0);
-        font-size: 3rem;
+        font-size: 3vw;
         letter-spacing: normal;
         font-family: Lato,sans-serif;
         font-weight: 900;
         }
+
+.button {
+color: rgba(255, 255, 255, 1);
+font-size: 0.8vw;
+font-family: Lato,sans-serif;
+white-space: pre-wrap;
+line-height: 1.5;
+position:relative;
+padding-bottom: 5px;
+stroke-width: 1px;
+-webkit-text-stroke-color: white;
+font-weight:semi-bold;
+text-decoration: none;
+margin: 2vh;
+
+
+}
+.button:hover {
+  
+  color: rgb(255, 65, 36);
+  box-shadow: 0 2.6vh 3vh rgb(2 2 2 / 40%);
+}
+
+
 
 
 /* NOTES
