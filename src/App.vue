@@ -1,7 +1,18 @@
 <template>
-  <div id="app">
 
-      <Map/>
+
+
+  <div id="app">
+    <div v-if="!isMobile()">
+        <Map/>
+    </div>
+    <div v-else>
+    This app does not work on Mobile devices, try switching to a desktop device.
+    </div>
+
+
+
+      
 
   </div>
 </template>
@@ -13,7 +24,16 @@ export default {
   name: 'App',
   components: {
     Map
-  }
+  },
+  methods: {
+    isMobile() {
+   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+     return true
+   } else {
+     return false
+   }
+  },
+}
 }
 </script>
 

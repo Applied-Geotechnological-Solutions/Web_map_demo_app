@@ -1578,6 +1578,23 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
     function moveFeature(event) {
 
       // style called again to enable scaling of icon
+
+      var Boat_Clinic_style2 = new Style({
+      image: new Icon({
+      src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/1.boatc.png?raw=true',
+      crossOrigin: undefined,
+      scale: [icon_size.value, icon_size.value],
+            }),
+          })
+
+      var Water_T_style2 = new Style({
+      image: new Icon({
+      src: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Movement/2.wtruck.png?raw=true',
+      crossOrigin: undefined,
+      scale: [icon_size.value, icon_size.value],
+            }),
+          })
+      
       
 
       const speed = 10;
@@ -1611,10 +1628,10 @@ var Water_T_position = new Point(Water_T_route.getFirstCoordinate())
 
       var vectorContext = getVectorContext(event);
 
-      vectorContext.setStyle(Boat_Clinic_Point.getStyle());
+      vectorContext.setStyle(Boat_Clinic_style2); //Boat_Clinic_Point.getStyle() alternative ?
       vectorContext.drawGeometry(Boat_Clinic_position);
 
-      vectorContext.setStyle(Water_T_Point.getStyle());
+      vectorContext.setStyle(Water_T_style2);
       vectorContext.drawGeometry(Water_T_position);
       
       
