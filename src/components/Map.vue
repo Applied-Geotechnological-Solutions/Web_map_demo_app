@@ -41,7 +41,7 @@
 
                     <div class="text-bold-white"> Icon size: </div>
 
-                            <input type="range" min="0.3" max="0.8" step="0.1" v-model="icon_size" @change=change_icon_scale(icon_size) style='width:13vh;'>
+                            <input type="range" min="0.3" max="0.8" step="0.05" v-model="icon_size" @change=change_icon_scale(icon_size) style='width:13vh;'>
 
                             <br>
 
@@ -663,7 +663,7 @@ const layer_items = ref([
 
 const Baselayer_src = ref(layer_items.value[1].src)
 
-const icon_size = ref(0.5)
+const icon_size = ref(0.65)
 
 const styles_items = ref([ // WHENADDLAYERS
 
@@ -1033,7 +1033,7 @@ const Food_Distribution = ref(new VectorLayer({
       visible: layer_items.value[5].visible,
       source: new VectorSource({
         format: new GeoJSON(),
-        url: 'https://raw.githubusercontent.com/Syverpet/prototyping_data_april_2022/main/Access_to_food.json.geojson',
+        url: 'https://raw.githubusercontent.com/Applied-Geotechnological-Solutions/Web_map_demo_data/main/Food/food.json.geojson',
         crossOrigin: undefined,
       }),
       style: styles_items.value[3].style,
@@ -1080,7 +1080,7 @@ const Food_Distribution = ref(new VectorLayer({
   }))
 
   const Seed_Distribution = ref(new VectorLayer({
-      name: 'Seed_Distribution',
+      name: 'Seed Distribution',
       group: 'Food Security',
       visible: layer_items.value[9].visible,
       source: new VectorSource({
@@ -1816,7 +1816,7 @@ function mapClick() {
 
       layers.value = map.value.getLayers().getArray();
 
-      console.log(coordinate)
+      console.log("layers.value", layers.value)
 
 
 
@@ -1985,7 +1985,7 @@ onMounted(() => {
 
 
 .mouse-position {
-  color: rgb(255, 65, 36);
+  color: rgb(255, 255, 255); /* (255, 65, 36); */
   font-size: 15px;
   font-family: Roboto, Arial, sans-serif;
   padding-left: 650px
@@ -2296,14 +2296,14 @@ font-weight: bold;
 }
 
 .text-bold-orange {
-color: rgb(255, 65, 36);
+color: rgb(255, 255, 255); /* (255, 65, 36); */
 font-size: 13px;
 font-family: Silka, sans-serif;
 font-weight: bold;
 }
 
 .header-orange {
-color: rgb(255, 65, 36);
+color: rgb(255, 255, 255); /* (255, 65, 36); */
 font-size: 16px;
 font-family: Silka, sans-serif;
 font-weight: bold;
@@ -2313,7 +2313,7 @@ margin-top: 3.5vh;
 }
 
 .header-orange-attributes {
-color: rgb(255, 65, 36);
+color: rgb(255, 255, 255); /* (255, 65, 36); */
 font-size: 16px;
 font-family: Silka, sans-serif;
 font-weight: bold;
@@ -2394,8 +2394,8 @@ margin: 2vh;
 }
 .button:hover {
   
-  color: rgb(255, 65, 36);
-  box-shadow: 0 2.6vh 3vh rgb(2 2 2 / 40%);
+  color: rgb(252, 240, 3); /* (255, 65, 36); */
+  box-shadow: 0 0.6vh 3vh rgb(2 2 2 / 40%);
 }
 
 
