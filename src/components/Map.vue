@@ -6,7 +6,7 @@
 <a href="https://agtsolutions.org/">
 <img src="https://github.com/Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/AGT_logo1_2.png?raw=true%22" style="height:120px; object-fit: contain; order: 1;">
 </a>
- <div class="home-header" style=" order: 2; margin-left:26%; margin-top:1vh; margin-bottom:2vh; min-width:23%"> Web Map Demo </div> 
+ <div class="home-header" style=" order: 2; margin-left:26%; margin-top:1vh; margin-bottom:2vh; min-width:23%"> Web GIS Demo </div> 
 
 
   
