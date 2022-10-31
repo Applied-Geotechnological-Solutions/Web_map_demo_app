@@ -1,23 +1,21 @@
 <template>
 
 
-<div style="display: flex; justify-content: center; align-items: flex-end;">
+<div style="display: flex; justify-content:space-between; align-items: center; ">
 
-<a href="https://agtsolutions.org/">
-<img src="https://github.com/Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/AGT_logo1_2.png?raw=true%22" style="height:120px; object-fit: contain; order: 1;">
+<a href="https://pmm.org.pl/">
+<img src="https://s3.eu-west-2.amazonaws.com/pleo-polska-misja-medyczna/Logo/home_logo_pmm_wersja-podstawowa_granat-i-czerwony_pl_v2.svg" class="logo">
 </a>
- <div class="home-header" style=" order: 2; margin-left:26%; margin-top:1vh; margin-bottom:2vh; min-width:23%"> Web GIS Demo </div>
+<div class="home-header" style="order: 2;"> ACTIVITIES MAP </div>
 
 
 
 
 
 
-<button style=" order: 3; background-color: rgb(23, 9, 46); border-radius: 1.5vh; margin-top:1vh; margin-bottom:2vh; margin-left:15%; min-width:19% max-width:19%;">
-  <a class="button" href="mailto: syver.petersen@agtsolutions.org?subject=Questions about AGT web map">
-    Questions about our Web GIS product?
-  </a>
-</button>
+<a class="button" style="order: 3;" href="mailto: syver.petersen@agtsolutions.org?subject=Questions about AGT web map">
+Ask about the map
+</a>
 
 
 </div>
@@ -41,12 +39,12 @@
 
                     <div class="text-bold-white"> Icon size: </div>
 
-                            <input type="range" min="0.3" max="0.8" step="0.05" v-model="icon_size" @change=change_icon_scale(icon_size) style='width:13vh;'>
+                            <input type="range" min="0.8" max="1" step="0.1" v-model="icon_size" @change=change_icon_scale(icon_size) style='width:7vw; min-width:40px;'>
 
                             <br>
 
                     <div class=text-bold-white>
-                                Base layers:
+                                Background map:
                             </div>
 
                     <div v-for="item in layer_items" :key="item" class="overlay-text-feed">
@@ -150,19 +148,16 @@
 
         </div>
 
-        <div ref="popupMessage1" class="popup2">
+   <div ref="popupMessage1" class="popup2">
 
           <div class=popup2-text>
-            Icons and design layout will be costumized for clients' needs!
-          </div>
 
+         </div>
 
-
-
-
-          <span class="popup-close2" @click="closePopup2">x</span>
+         <span class="popup-close2" @click="closePopup2">x</span>
 
         </div>
+
 
 
           <div ref="popupAttributes" class="popup">
@@ -392,7 +387,7 @@ const layer_items = ref([
     {
     id: 3,
     name: 'Cash Assistance',
-    img: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Food%20Security/1.cash.png?raw=true',
+    img: 'https://github.com//Syverpet/prototyping_data_april_2022/blob/main/icons/orthopedic care.png?raw=true',
     visible: true,
     inlegend: true,
     base_layer: false,
@@ -402,7 +397,7 @@ const layer_items = ref([
   {
     id: 4,
     name: 'Fishing Equipment Distribution',
-    img: 'https://github.com//Applied-Geotechnological-Solutions/Web_map_demo_data/blob/main/icons/Food%20Security/2.fish.png?raw=true',
+    img: 'https://github.com//Syverpet/prototyping_data_april_2022/blob/main/icons/Icon_test_40px.png?raw=true',
     visible: true,
     inlegend: true,
     base_layer: false,
@@ -663,7 +658,7 @@ const layer_items = ref([
 
 const Baselayer_src = ref(layer_items.value[1].src)
 
-const icon_size = ref(0.65)
+const icon_size = ref(0.8)
 
 const styles_items = ref([ // WHENADDLAYERS
 
@@ -1432,7 +1427,7 @@ function initMap() {
 
   overlay2.value = new Overlay({ element: popupMessage1.value,
   autoPan: true,
-  position: [-1815315.442215883, 1424799.1294523671],
+  position: [-9015315.442215883, 16624799.1294523671],
   autoPanAnimation: {
   duration: 250 } })
 
@@ -1987,7 +1982,7 @@ onMounted(() => {
 .mouse-position {
   color: rgb(255, 255, 255); /* (255, 65, 36); */
   font-size: 15px;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Silka, sans-serif;
   padding-left: 650px
 }
 
@@ -2044,7 +2039,7 @@ onMounted(() => {
   position: relative;
   transition: all 0.3s ease-in-out;
   color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: Silka, sans-serif;
   font-size: 25px;
 }
 .popup2:hover {
@@ -2055,7 +2050,7 @@ onMounted(() => {
     color: white;
     font-size: 14px;
     font-weight: 400;
-    font-family: Open Sans,sans-serif;
+    font-family: Silka, sans-serif;
     letter-spacing: .03125em;
     line-height: 1.5rem;
     white-space: pre-wrap;
@@ -2087,22 +2082,24 @@ onMounted(() => {
 
 .overlay-text-header {
 color: white;
-font-size: 16px;
+font-size: clamp(5px, 0.8vw, 12px);
 font-family: Silka, sans-serif;
 font-weight: bold;
 }
 
 .overlay-text-feed {
 color: white;
-font-size: 13px;
+font-size: clamp(5px, 0.8vw, 11px);
 font-family: Silka, sans-serif;
 white-space: pre-wrap;
 line-height: 1.5;
+margin-bottom: clamp(2px, 0.1vw, 0.1vw)
+
 }
 
 .overlay-text-info {
 color: rgb(255, 255, 255);
-font-size: 13px;
+font-size: clamp(7px, 0.8vw, 0.8vw);
 font-family: Silka, sans-serif;
 white-space: pre-wrap;
 line-height: 1.5;
@@ -2117,7 +2114,7 @@ stroke-width: 3px;
     grid-area: header;
     font-size: 25px;
     height: 5vh;
-    font-family: 'Gill Sans','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Silka, sans-serif;
 }
 
 
@@ -2131,11 +2128,12 @@ stroke-width: 3px;
 
 .left {
     grid-area: left;
-    width: 320px;;
+    width: 25vw;
     height: 85vh;
     background: rgb(23, 9, 46);
     border-radius: 0.5vh;
     overflow:auto;
+    max-width: 330px;
 }
 
 .right {
@@ -2148,7 +2146,22 @@ stroke-width: 3px;
 
 .toc {
     margin-left: 2vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Silka, sans-serif;
+}
+.ol-control button {
+  height: 1.5vh;
+  max-height: 70vh;
+  width: 1.5vh;
+ font-size: clamp(8px, 1vw, 12px)
+}
+
+.ol-zoom-in button {
+  height: 1.5vh;
+  max-height: 70vh;
+  width: 1.5vh;
+}
+.ol-zoomslider {
+  width: 1.5vh;
 }
 
 
@@ -2156,14 +2169,16 @@ stroke-width: 3px;
 
 .overlay-legend {
 display: block;
-min-height: 10vh;
+min-height: 5vh;
 max-height: 70vh;
-min-width: 17vh;
+width: clamp(10px, 20vh, 20vh);
 overflow:auto;
+overflow-y: scroll;
+overflow-x: hidden;
 box-sizing: border-box;
 
-margin: 40px auto;
-padding: 15px;
+margin: 2vw auto;
+padding: 1vw;
 border: 1px solid rgba(0,110,172,1);
 box-shadow: 0 5px 10px rgb(2 2 2 / 40%);
 border-radius: 2.5px;
@@ -2171,12 +2186,12 @@ border-radius: 2.5px;
 
 
 background-color: rgb(123, 152, 188);
-font-family: Tahoma, Arial, sans-serif;
+font-family: Silka, sans-serif;
 
 transition: all 0.5s ease-in-out;
 position: absolute;
-left: 60px;
-top: 20px;
+left: clamp(12px, 8vw, 40px);
+top: clamp(19px, 5vw, 10px);
 }
 
 .overlay-legend:hover {
@@ -2185,14 +2200,17 @@ top: 20px;
 
 .overlay-legend-toggle {
 background-color: rgb(123, 152, 188);
-height: 25px;
-width: 80px;
+height: 2vh;
+width: 5vw;
+min-height: 12px;
+min-width: 40px;
+font-size: clamp(9px, 0.7vw, 0.7vw);
 color: #fff;
 border: 0.2px;
 border-radius: 1.5px;
 border-color: rgba(255, 255, 255, 0.849);
 position: absolute;
-left: 60px;
+left: 6vh;
 top: 9px;
 
 }
@@ -2204,6 +2222,7 @@ top: 9px;
 
 .legend-grid-container {
     display: grid;
+    grid-template-columns: clamp(25px, 2vw, 2vw);
     grid-template-areas:
     'legend-header legend-header'
     'legend-left legend-right';
@@ -2218,7 +2237,7 @@ top: 9px;
     margin: 0px;
     padding: 0px;
 
-    font-size: 1.17em;
+    font-size: clamp(8px, 1.5vw, 15px);
     margin-top: 0.1em;
     margin-bottom: 0.4em;
     margin-left: 0;
@@ -2234,6 +2253,7 @@ top: 9px;
     height: 5vh;
     border: 0px solid rgb(0, 0, 0);
 
+
 }
 
 .legend-right {
@@ -2246,7 +2266,8 @@ top: 9px;
 .legend-img {
   padding: 0px;
   margin: 0px;
-  height: 40px;
+  width: 2vw;
+  min-width: 20px;
 }
 
 .legend-list {
@@ -2259,23 +2280,20 @@ top: 9px;
 
 .legend-text {
   color: rgb(255, 255, 255);
-  font-size: 13px;
+  font-size: clamp(5px, 0.7vw, 11px);
   font-family: Silka, sans-serif;
   font-weight: bold;
-
   position: relative;
-  top: 1em;
-}
-
-.legend-text:hover {
-  cursor: pointer;
+  padding: 0.5vw;
+  padding-right: 3vw;
+  top: 0.2rem;
 }
 
 /* GENERAL CLASES */
 
 .text-bold-white {
 color: rgb(255, 255, 255);
-font-size: 13px;
+font-size: clamp(6px, 0.7vw, 12px);
 font-weight: bold;
 padding-bottom: 5px;
 bottom: 5px;
@@ -2296,15 +2314,15 @@ font-weight: bold;
 }
 
 .text-bold-orange {
-color: rgb(255, 255, 255); /* (255, 65, 36); */
+color: rgb(255, 65, 36); /* (255, 65, 36); */
 font-size: 13px;
 font-family: Silka, sans-serif;
 font-weight: bold;
 }
 
 .header-orange {
-color: rgb(255, 255, 255); /* (255, 65, 36); */
-font-size: 16px;
+color: rgb(255, 65, 36); /* (255, 65, 36); */
+font-size: clamp(7px, 0.8vw, 0.8vw);
 font-family: Silka, sans-serif;
 font-weight: bold;
 font-weight: 700;
@@ -2313,7 +2331,7 @@ margin-top: 3.5vh;
 }
 
 .header-orange-attributes {
-color: rgb(255, 255, 255); /* (255, 65, 36); */
+color: rgb(255, 65, 36); /* (255, 65, 36); */
 font-size: 16px;
 font-family: Silka, sans-serif;
 font-weight: bold;
@@ -2363,40 +2381,58 @@ margin-top: 1vh;
   width: 70%; /* Width of the outside container */
 }
 
-.PDF-export-text {
-      font-weight: 400;
-    font-family: Open Sans,sans-serif;
-}
-
 .home-header {
         color: rgb(0, 0, 0);
-        font-size: 3vw;
+        font-size: clamp(20px, 2vw, 2vw);
         letter-spacing: normal;
-        font-family: Lato,sans-serif;
+        font-family: Silka, sans-serif;
         font-weight: 900;
+        white-space: nowrap;
+        letter-spacing: -0.04vw;
         }
 
 .button {
-color: rgba(255, 255, 255, 1);
-font-size: 0.8vw;
-font-family: Lato,sans-serif;
-white-space: pre-wrap;
-line-height: 1.5;
-position:relative;
-padding-bottom: 5px;
-stroke-width: 1px;
--webkit-text-stroke-color: white;
-font-weight:semi-bold;
-text-decoration: none;
+background-color: rgb(255, 65, 36);
+color: rgb(255, 255, 255);
+padding: 0.3vw;
 margin: 2vh;
-
-
+margin-left: 10vh;
+width: 200px;
+border: 0.2vw solid rgb(255, 65, 36);
+border-radius: 15vh;
+font-size: 0.65vw;
+font-family: Silka, sans-serif;
+font-weight: 900;
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+letter-spacing: 0vw;
+border-radius: 2vh;
+transition: all 200ms ease-in-out;
 }
+
 .button:hover {
 
-  color: rgb(252, 240, 3); /* (255, 65, 36); */
-  box-shadow: 0 0.6vh 3vh rgb(2 2 2 / 40%);
+    flex-grow: 0.01;
+    background-color: rgb(255, 255, 255);
+    color:rgb(255, 65, 36);
+
+ /* (255, 65, 36); */
 }
+
+.logo {
+  height: 5vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+@media (max-width: 767px) {
+        .button {
+          display: none;
+        }
+    }
 
 
 
