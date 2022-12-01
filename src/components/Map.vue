@@ -3,8 +3,8 @@
 
 <div style="display: flex; justify-content:space-between; align-items: center; ">
 
-<a href="https://pmm.org.pl/">
-<img src="https://s3.eu-west-2.amazonaws.com/pleo-polska-misja-medyczna/Logo/home_logo_pmm_wersja-podstawowa_granat-i-czerwony_pl_v2.svg" class="logo">
+<a href="https://agtsolutions.org/">
+<img src="https://agtsolutions.org/img/AGT_logo1_2.cdff2911.png" class="logo" style="height: 8vh">
 </a>
 <div class="home-header" style="order: 2;"> ACTIVITIES MAP </div>
 
